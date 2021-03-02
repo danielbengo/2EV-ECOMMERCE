@@ -1,4 +1,4 @@
-package com.example.labo4.Web.Config;
+package com.example.RETO2.Web.Config;
 
 
 import com.example.labo4.Services.MoviesService;
@@ -10,8 +10,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DI {
     @Bean
-    MoviesService createMovieService(){
-        return new MoviesService();
+    OrderService createOrderService(){
+        return new OrderService();
+    }
+    @Bean
+    ProductsService createProductsService(){
+        return new ProductsService();
+    }
+    @Bean
+    OrderProductService createOrderProductService(){
+        return new OrderProductService();
     }
 
     @Bean

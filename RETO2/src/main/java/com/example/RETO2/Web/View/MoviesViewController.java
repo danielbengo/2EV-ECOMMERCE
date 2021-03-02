@@ -1,4 +1,4 @@
-package com.example.labo4.Web.View;
+package com.example.RETO2.Web.View;
 
 import java.util.Locale;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.example.labo4.Repositories.Interfaces;
+package com.example.RETO2.Repositories.Interfaces;
 
 import java.util.Collection;
 

@@ -1,4 +1,4 @@
-package com.example.labo4.Web.API;
+package com.example.RETO2.Web.API;
 
 import java.util.List;
 
