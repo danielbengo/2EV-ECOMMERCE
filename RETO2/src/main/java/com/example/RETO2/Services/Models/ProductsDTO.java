@@ -1,6 +1,6 @@
 package com.example.RETO2.Services.Models;
 
-public class OrderDTO {
+public class ProductsDTO {
     
     private String nombre;
     public String getNombre() { return nombre; }

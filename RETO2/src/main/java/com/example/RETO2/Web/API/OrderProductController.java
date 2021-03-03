@@ -1,10 +1,13 @@
 package com.example.RETO2.Web.API;
 
+import com.example.RETO2.Services.OrderProductService;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("v1/orderproduct")
-public class OrderController{
+public class OrderProductController {
 
     private final OrderProductService orderproductService;
 

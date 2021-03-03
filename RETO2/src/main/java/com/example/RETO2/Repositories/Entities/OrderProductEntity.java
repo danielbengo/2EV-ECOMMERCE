@@ -1,9 +1,15 @@
 package com.example.RETO2.Repositories.Entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 @Table(name = "OrderProduct")
 @Entity(name="OrderProduct")
 
-public class OrderProduct{
+public class OrderProductEntity{
 
 
 
@@ -12,13 +18,13 @@ private @Id @GeneratedValue(strategy= GenerationType.IDENTITY) Long orderproduct
 
 
     //public OrderProduct(){ }
- public OrderProduct(){
+ public OrderProductEntity(){
      
  }
-    public OrderProduct(int cantidad, Order order, Products product){
+    public OrderProductEntity(int cantidad, OrderEntity idorder, ProductsEntity idproduct){
         this.cantidad=cantidad;
-        this.order=order;
-        this.products = product;
+        this.idorder=idorder;
+        this.idproduct = idproduct;
 
         //intentar un set cambiar el oderproductid
         // al valor de autoincremid y hacerle un ++??????? (TESTEAR)
@@ -31,16 +37,17 @@ private @Id @GeneratedValue(strategy= GenerationType.IDENTITY) Long orderproduct
     public void setCantidad(int cantidad) { this.cantidad = cantidad;}
 
     private OrderEntity idorder;
-    public Order getOrder() { return order; }
-    public void setOrder(Order order) { this.order = order;}
+    public OrderEntity getOrder() { return idorder; }
+    public void setOrder(OrderEntity idorder) { this.idorder = idorder;}
 
+    private ProductsEntity idproduct;
+    public ProductsEntity getProducts() { return idproduct; }
+    public void setProducts(ProductsEntity idproduct) { this.idproduct = idproduct;}
    
-    public int getOrderproductid() { return orderproductid; }
-    public void setOrderproductid(int orderproductid) { this.orderproductid = orderproductid;}
+    public Long getOrderproductid() { return orderproductid; }
+    public void setOrderproductid(Long orderproductid) { this.orderproductid = orderproductid;}
     
-    private ProductsEtity idproduct;
-    public Products getProducts() { return products; }
-    public void setProducts(Products products) { this.products = products;}
+    
 
 
     // public int getAutoincremId() {

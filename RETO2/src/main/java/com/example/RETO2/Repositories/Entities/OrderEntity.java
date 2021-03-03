@@ -1,6 +1,10 @@
 package com.example.RETO2.Repositories.Entities;
 
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Table(name = "Order")
 @Entity(name="Order")
@@ -11,7 +15,7 @@ public class OrderEntity{
 
    
 
-    public Order(String fecha, String nombreusuario, String estado){
+    public OrderEntity(String fecha, String nombreusuario, String estado){
         this.fecha = fecha;
         this.nombreusuario = nombreusuario;
         this.estado = estado;
@@ -33,11 +37,11 @@ public class OrderEntity{
     public void setEstado(String estado) { this.estado = estado;}
 
     
-    public int getIdorder() { return idorder; }
-    public void setIdorder(int idorder) { this.idorder = idorder;}
+    public Long getIdorder() { return idorder; }
+    public void setIdorder(Long idorder) { this.idorder = idorder;}
 
     //constructores vacios solo con el autoincrem en los 3 models
-    public Order(){ 
+    public OrderEntity(){ 
         
     }
 }

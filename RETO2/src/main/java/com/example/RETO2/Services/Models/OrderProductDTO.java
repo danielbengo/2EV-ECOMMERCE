@@ -1,6 +1,9 @@
 package com.example.RETO2.Services.Models;
 
-public class OrderDTO {
+import com.example.RETO2.Repositories.Entities.OrderEntity;
+import com.example.RETO2.Repositories.Entities.ProductsEntity;
+
+public class OrderProductDTO {
     
     public OrderEntity orderEntity;
     public ProductsEntity productsEntity;
