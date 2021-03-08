@@ -1,4 +1,4 @@
-package com.example.labo4.Web.Config;
+package com.example.RETO2.Web.Config;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
