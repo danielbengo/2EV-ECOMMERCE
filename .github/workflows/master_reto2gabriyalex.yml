@@ -29,4 +29,4 @@ jobs:
         app-name: 'reto2gabriyalex'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_f4ad98e1647449d289b040ec90dbe47d }}
-        package: '${{ github.workspace }}/target/*.jar'
+        package: '${{ github.workspace }}/RETO2/target/*.jar'
