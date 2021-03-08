@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity(name="Products")
 
 public class ProductsEntity{
-    private @Id @GeneratedValue(strategy= GenerationType.IDENTITY) Long idproducto;
+    private @Id @GeneratedValue(strategy= GenerationType.IDENTITY) Long idproduct;
 
     public ProductsEntity(String nombre, double precio, String url){
        
@@ -35,8 +35,8 @@ public class ProductsEntity{
     public void setPrecio(double precio) { this.precio = precio;}
     
     
-    public Long getIdproducto() { return idproducto; }
-    public void setIdproducto(Long idproducto) { this.idproducto = idproducto;}
+    public Long getIdproduct() { return idproduct; }
+    public void setIdproduct(Long idproduct) { this.idproduct = idproduct;}
 
 
     public ProductsEntity() {

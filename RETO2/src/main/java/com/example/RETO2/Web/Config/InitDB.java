@@ -1,7 +1,9 @@
 package com.example.RETO2.Web.Config;
 
 import com.example.RETO2.Repositories.Entities.OrderEntity;
+import com.example.RETO2.Repositories.Entities.OrderProductEntity;
 import com.example.RETO2.Repositories.Entities.ProductsEntity;
+import com.example.RETO2.Repositories.Interfaces.OrderProductRepository;
 import com.example.RETO2.Repositories.Interfaces.OrderRepository;
 import com.example.RETO2.Repositories.Interfaces.ProductsRepository;
 
@@ -12,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class InitDB {
  @Bean
- CommandLineRunner initDatabase(  OrderRepository repository1, ProductsRepository repository2) {
+ CommandLineRunner initDatabase(  OrderRepository repository1, ProductsRepository repository2, OrderProductRepository OPrepository) {
 
     return args -> {
         repository1.save(new OrderEntity("12:05", "Donald Trump","En curso"));
@@ -24,7 +26,8 @@ public class InitDB {
         repository2.save(new ProductsEntity("Mouse", 34.95,"https://www.grosbill.com/images.grosbill.com/imagesproduitnew/images800jpg/610624.jpg"));
         repository2.save(new ProductsEntity("Teclado", 49.99,"https://www.marsgaming.eu/uploads/_thumnails/mkxtklbpt_960x960.png"));
         
-
+        OPrepository.save(new OrderProductEntity(3,2L,1L));
+        OPrepository.save(new OrderProductEntity(2,3L,1L));
     };
 
     

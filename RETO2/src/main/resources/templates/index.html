@@ -1,0 +1,93 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#locales").change(function () {
+                var selectedOption = $('#locales').val();
+                if (selectedOption != '') {
+                    window.location.replace('?lang=' + selectedOption);
+                }
+            });
+        });
+    </script>
+    <script src="javascript/funciones.js"></script>
+</header>
+<select class="m-3 rounded-sm text-left fixed-bottom text-right text-wrap p-1" onclick="reload()"  id="locales">
+    <option value="th:text=#{button.locales}" class="p-1" selected>Seleccionar idioma</option>
+    <option value="en"th:text="#{lang.en}">English</option>
+    <option value="es" th:text="#{lang.es}">Spanish</option>
+</select>
+
+<h1 th:text="#{messages}"></h1>
+<span th:text="#{lang.change}"></span>
+
+
+
+<body style="background-color: wheat;">
+    <div class="p-3 bg-light text-center">
+    
+        <div class="row">
+            <div class="col-8 productsGrid container-sm w-75 d d-flex flex-sm-wrap justify-content-between mt-5 mr-0 ml-0">
+                <div class="card d d-flex mb-5 ml-3 mr-3" style="width: 30%;">
+                 
+                    <img style="width: 50%;"class="card-img-top image-card" src="https://cdn.ossfitness.com/img/full/V12.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">Cinta de correr</h5>
+                        <p class="card-text">600€</p>
+                        <button class="btn btn-primary" >Añadir al carrito</button>
+                    </div>
+                   
+                </div>
+                <div class="card d d-flex mb-5 ml-3 mr-3" style="width: 30%;">
+                   
+                    <img style="width: 50%;" class="card-img-top image-card" src="https://cdn.ossfitness.com/img/full/AFW-Mancuernas-de-Goma-PRO1.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">Mancuernas</h5>
+                        <p class="card-text">60€</p>
+                        <button class="btn btn-primary" >Añadir al carrito</button>
+                    </div>
+                  
+                </div>
+                <div class="card d d-flex mb-5 ml-3 mr-3" style="width: 30%;">
+                   
+                    <img style="width: 50%;" class="card-img-top image-card" src="https://images-na.ssl-images-amazon.com/images/I/61l3gpezb6L._AC_SX466_.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">Máquina de cuádriceps</h5>
+                        <p class="card-text">1000€</p>
+                        <button class="btn btn-primary" >Añadir al carrito</button>
+                    </div>
+                   
+                </div>
+                <div class="card d d-flex mb-5 ml-3 mr-3" style="width: 30%;">
+                  
+                    <img style="width: 50%;" class="card-img-top image-card" src="https://images-na.ssl-images-amazon.com/images/I/51Rl5C5DOVL._AC_SX425_.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">Máquina multifunción</h5>
+                        <p class="card-text">3000.0€</p>
+                        <button class="btn btn-primary" >Añadir al carrito</button>
+                    </div>
+              
+                </div>
+                <div class="card d d-flex mb-5 ml-3 mr-3" style="width: 30%;">
+                   
+                    <img  style="width: 50%;" class="card-img-top image-card" src="https://images-na.ssl-images-amazon.com/images/I/612Rayok8yL._AC_SX425_.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">Bicicleta estática</h5>
+                        <p class="card-text">500€</p>
+                        <button class="btn btn-primary" >Añadir al carrito</button>
+                    </div>
+                    <!-- </div> -->
+                </div>
+                
+            </div>
+
+            
+    </div>
+
+    <div><body>
+    
+
+</body></div>
+
+</body>

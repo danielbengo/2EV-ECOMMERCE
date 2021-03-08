@@ -6,8 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "Order")
-@Entity(name="Order")
+@Table(name = "Orders")
+@Entity(name="Orders")
 
 public class OrderEntity{
 //uso este autoincrementable en vez de el de dentro de los constructores
