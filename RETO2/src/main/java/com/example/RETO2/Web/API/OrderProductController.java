@@ -6,6 +6,7 @@ import com.example.RETO2.Services.OrderProductService;
 import com.example.RETO2.Services.Models.OrderProductDTO;
 import com.example.RETO2.Services.Models.ProductsDTO;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,21 +31,23 @@ public class OrderProductController {
     return orderproductService.orderProductsById(id);
   }
   
-  //añadi
-  // @PostMapping
-  // public OrderProductDTO AddOrderProd(@RequestBody OrderProductDTO ordpro){
-  //   return orderproductService.add(ordpro)
-  // }
+  //añadir
+  @PostMapping
+  public OrderProductDTO AddOrderProd(@RequestBody OrderProductDTO ordpro){
+    return orderproductService.add(ordpro);
+  }
 
+
+  //DESCOMENTAR ANTES DE ENTREGAR
    //update
   //  @PutMapping("/{id}")
   //  public OrderProductDTO UpdateOrderProd(@RequestBody OrderProductDTO ordpro, @PathVariable("id")Long id){
-  //    return orderproductService.UpdateOrderProdate(id, ordpro);
+  //    return orderproductService.update(id, ordpro);
   //  }
 
-    //añadir
-  // @PostMapping
-  // public OrderProductDTO AddOrderProd(@RequestBody OrderProductDTO ordpro){
-  //   return orderproductService.add(ordpro)
+    //DELETEAR
+  // @DeleteMapping("/{id}")
+  // public void DeleteOrdPro(@PathVariable ("id")Long id){
+  //    orderproductService.delete(id);
   // }
 }
