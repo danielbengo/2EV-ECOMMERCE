@@ -30,7 +30,7 @@ public class OrderProductController {
     return orderproductService.orderProductsById(id);
   }
   
-  //añadir
+  //añadi
   // @PostMapping
   // public OrderProductDTO AddOrderProd(@RequestBody OrderProductDTO ordpro){
   //   return orderproductService.add(ordpro)
