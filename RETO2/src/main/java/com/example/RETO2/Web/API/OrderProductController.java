@@ -37,10 +37,10 @@ public class OrderProductController {
   // }
 
    //update
-   @PutMapping("/{id}")
-   public OrderProductDTO UpdateOrderProd(@RequestBody OrderProductDTO ordpro, @PathVariable("id")Log id){
-     return orderproductService.update(id, ordpro);
-   }
+  //  @PutMapping("/{id}")
+  //  public OrderProductDTO UpdateOrderProd(@RequestBody OrderProductDTO ordpro, @PathVariable("id")Long id){
+  //    return orderproductService.UpdateOrderProdate(id, ordpro);
+  //  }
 
     //añadir
   // @PostMapping
